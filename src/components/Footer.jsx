@@ -28,15 +28,15 @@ function Footer() {
                     </p>
 
                     <div className="footer-socials">
-                        <a href="#" aria-label="Instagram">
+                        <a href="https://www.instagram.com/webe_xxy?igsh=MXI0c29ybG5sYWhoYg%3D%3D&utm_source=qr" aria-label="Instagram">
                             <FiInstagram />
                         </a>
 
-                        <a href="#" aria-label="LinkedIn">
+                        <a href="www.linkedin.com/in/yahya-m-6808aa321" aria-label="LinkedIn">
                             <FiLinkedin />
                         </a>
 
-                        <a href="#" aria-label="Facebook">
+                        <a href="https://www.facebook.com/share/185ZHRkzQC/?mibextid=wwXIfr" aria-label="Facebook">
                             <FiFacebook />
                         </a>
                     </div>
