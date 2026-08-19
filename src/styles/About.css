@@ -110,37 +110,22 @@
 ========================= */
 
 .about-card-logo {
-  width: 105px;
-  height: 105px;
-
-  border-radius: 50%;
-
-  background: #ffffff;
-
-  color: #800105;
+  width: 110px;
+  height: 110px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
-  font-size: 32px;
-
-  font-weight: 800;
-
-  position: relative;
-
-  z-index: 2;
-
-  box-shadow:
-    0 15px 35px rgba(0, 0, 0, 0.15);
-
-  margin-bottom: 25px;
-
-  transition:
-    transform 0.4s ease;
+  overflow: hidden;
 }
 
+.about-card-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
 .about-main-card:hover .about-card-logo {
   transform: scale(1.08) rotate(5deg);
 }

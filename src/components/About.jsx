@@ -1,5 +1,6 @@
 import "../styles/About.css";
 import { FiArrowUpRight, FiCheck } from "react-icons/fi";
+import aboutLogo from "../assets/logo/about-logo.png";
 
 function About() {
   return (
@@ -11,7 +12,7 @@ function About() {
 
           <div className="about-main-card">
             <div className="about-card-logo">
-              WX
+              <img src={aboutLogo} alt="Webexxy" />
             </div>
 
             <div className="about-card-text">

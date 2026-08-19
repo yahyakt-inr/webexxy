@@ -1,5 +1,6 @@
 import "../styles/CTA.css";
 import { FiArrowRight } from "react-icons/fi";
+import aboutLogo from "../assets/logo/about-logo.png";
 
 function CTA() {
   return (
@@ -50,7 +51,7 @@ function CTA() {
           <div className="cta-circle circle-three"></div>
 
           <div className="cta-logo">
-            WX
+            <img src={aboutLogo} alt="Webexxy" />
           </div>
         </div>
 
