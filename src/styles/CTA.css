@@ -1,0 +1,518 @@
+/* =========================
+   CTA SECTION
+========================= */
+
+.cta {
+  width: 100%;
+  padding: 75px 0;
+
+  background: #800105;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.cta-container {
+  width: 90%;
+  max-width: 1200px;
+
+  min-height: 330px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 60px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================
+   CTA CONTENT
+========================= */
+
+.cta-content {
+  max-width: 700px;
+
+  position: relative;
+
+  z-index: 3;
+}
+
+.cta-label {
+  margin: 0 0 15px;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.cta-content h2 {
+  margin: 0 0 18px;
+
+  color: #ffffff;
+
+  font-size: clamp(42px, 5vw, 62px);
+
+  line-height: 1.08;
+
+  letter-spacing: -2px;
+}
+
+.cta-content h2 span {
+  color: #ffffff;
+
+  opacity: 0.72;
+}
+
+.cta-description {
+  max-width: 600px;
+
+  margin: 0 0 28px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 15px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================
+   CTA BUTTONS
+========================= */
+
+.cta-buttons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+}
+
+.cta-primary,
+.cta-secondary {
+  min-height: 52px;
+
+  padding: 0 21px;
+
+  border-radius: 6px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.cta-primary {
+  background: #ffffff;
+
+  color: #800105;
+}
+
+.cta-primary svg {
+  font-size: 17px;
+
+  transition: transform 0.3s ease;
+}
+
+.cta-primary:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.cta-primary:hover svg {
+  transform: translateX(4px);
+}
+
+.cta-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  color: #ffffff;
+
+  background: transparent;
+}
+
+.cta-secondary:hover {
+  background: #ffffff;
+
+  border-color: #ffffff;
+
+  color: #800105;
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================
+   DECORATION
+========================= */
+
+.cta-decoration {
+  width: 360px;
+  height: 360px;
+
+  flex-shrink: 0;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================
+   CIRCLES
+========================= */
+
+.cta-circle {
+  position: absolute;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+
+  transition:
+    transform 0.5s ease,
+    border-color 0.5s ease;
+}
+
+.circle-one {
+  width: 330px;
+  height: 330px;
+}
+
+.circle-two {
+  width: 240px;
+  height: 240px;
+}
+
+.circle-three {
+  width: 150px;
+  height: 150px;
+}
+
+.cta-decoration:hover .circle-one {
+  transform: scale(1.05);
+}
+
+.cta-decoration:hover .circle-two {
+  transform: scale(1.1);
+}
+
+.cta-decoration:hover .circle-three {
+  transform: scale(1.15);
+
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* =========================
+   CTA LOGO
+========================= */
+
+.cta-logo {
+  width: 92px;
+  height: 92px;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: #800105;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 27px;
+
+  font-weight: 800;
+
+  position: relative;
+
+  z-index: 2;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.15);
+
+  transition:
+    transform 0.4s ease;
+}
+
+.cta-decoration:hover .cta-logo {
+  transform: scale(1.08) rotate(5deg);
+}
+
+
+/* =========================
+   LARGE LAPTOP
+========================= */
+
+@media (max-width: 1200px) {
+  .cta {
+    padding: 65px 0;
+  }
+
+  .cta-container {
+    width: 92%;
+
+    min-height: 310px;
+
+    gap: 35px;
+  }
+
+  .cta-decoration {
+    width: 300px;
+    height: 300px;
+  }
+
+  .circle-one {
+    width: 280px;
+    height: 280px;
+  }
+
+  .circle-two {
+    width: 205px;
+    height: 205px;
+  }
+
+  .circle-three {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 950px) {
+  .cta {
+    padding: 65px 0;
+  }
+
+  .cta-container {
+    min-height: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 280px;
+
+    gap: 25px;
+  }
+
+  .cta-content h2 {
+    font-size: 48px;
+  }
+
+  .cta-description {
+    max-width: 550px;
+  }
+
+  .cta-decoration {
+    width: 270px;
+    height: 270px;
+  }
+
+  .circle-one {
+    width: 250px;
+    height: 250px;
+  }
+
+  .circle-two {
+    width: 180px;
+    height: 180px;
+  }
+
+  .circle-three {
+    width: 115px;
+    height: 115px;
+  }
+
+  .cta-logo {
+    width: 75px;
+    height: 75px;
+
+    font-size: 23px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .cta {
+    padding: 60px 0;
+  }
+
+  .cta-container {
+    width: 92%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 35px;
+  }
+
+  .cta-label {
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 12px;
+  }
+
+  .cta-content h2 {
+    margin-bottom: 16px;
+
+    font-size: 39px;
+
+    line-height: 1.1;
+
+    letter-spacing: -1.3px;
+  }
+
+  .cta-description {
+    margin-bottom: 25px;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+  .cta-buttons {
+    width: 100%;
+
+    gap: 10px;
+  }
+
+  .cta-primary,
+  .cta-secondary {
+    min-height: 50px;
+
+    padding: 0 17px;
+
+    flex: 1;
+
+    font-size: 12px;
+  }
+
+  .cta-decoration {
+    width: 230px;
+    height: 230px;
+
+    align-self: center;
+  }
+
+  .circle-one {
+    width: 215px;
+    height: 215px;
+  }
+
+  .circle-two {
+    width: 155px;
+    height: 155px;
+  }
+
+  .circle-three {
+    width: 100px;
+    height: 100px;
+  }
+
+  .cta-logo {
+    width: 68px;
+    height: 68px;
+
+    font-size: 20px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+  .cta {
+    padding: 50px 0;
+  }
+
+  .cta-content h2 {
+    font-size: 34px;
+  }
+
+  .cta-description {
+    font-size: 13px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .cta-primary,
+  .cta-secondary {
+    width: 100%;
+
+    flex: none;
+  }
+
+  .cta-decoration {
+    width: 200px;
+    height: 200px;
+  }
+
+  .circle-one {
+    width: 190px;
+    height: 190px;
+  }
+
+  .circle-two {
+    width: 140px;
+    height: 140px;
+  }
+
+  .circle-three {
+    width: 90px;
+    height: 90px;
+  }
+}

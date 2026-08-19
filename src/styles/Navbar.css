@@ -1,0 +1,510 @@
+/* =========================
+   ANNOUNCEMENT BAR
+========================= */
+
+.announcement-bar {
+  width: 100%;
+  min-height: 38px;
+
+  background: #800105;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 7px 15px;
+
+  text-align: center;
+}
+
+.announcement-bar p {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  line-height: 1.5;
+}
+
+.announcement-bar a {
+  color: #ffffff;
+
+  font-weight: 700;
+
+  text-decoration: underline;
+
+  margin-left: 5px;
+
+  transition: opacity 0.3s ease;
+}
+
+.announcement-bar a:hover {
+  opacity: 0.8;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  width: 100%;
+  height: 82px;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  border-bottom: 1px solid #eeeeee;
+
+  position: sticky;
+  top: 0;
+
+  z-index: 1000;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.navbar-container {
+  width: 92%;
+  max-width: 1350px;
+  height: 100%;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+}
+
+
+/* =========================
+   EXACT WEBEXXY LOGO
+========================= */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  text-decoration: none;
+}
+
+.webexxy-logo {
+  width: 165px;
+  max-width: 100%;
+
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover .webexxy-logo {
+  transform: scale(1.03);
+}
+
+
+/* =========================
+   DESKTOP NAVIGATION
+========================= */
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: clamp(20px, 2.5vw, 38px);
+
+  margin-left: auto;
+}
+
+.nav-menu a {
+  color: #454545;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  position: relative;
+
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:not(.mobile-project-btn)::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -8px;
+
+  width: 0;
+  height: 2px;
+
+  background: #800105;
+
+  transition: width 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #800105;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+
+/* =========================
+   DESKTOP CTA
+========================= */
+
+.navbar-cta {
+  min-height: 48px;
+
+  padding: 0 20px;
+
+  flex-shrink: 0;
+
+  border-radius: 6px;
+
+  background: #800105;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  white-space: nowrap;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.navbar-cta svg {
+  font-size: 18px;
+
+  transition: transform 0.3s ease;
+}
+
+.navbar-cta:hover {
+  background: #650104;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 25px rgba(128, 1, 5, 0.2);
+}
+
+.navbar-cta:hover svg {
+  transform: translate(3px, -3px);
+}
+
+
+/* =========================
+   MOBILE BUTTON
+========================= */
+
+.menu-toggle {
+  width: 45px;
+  height: 45px;
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #171717;
+
+  font-size: 28px;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+  color: #800105;
+
+  transform: scale(1.08);
+}
+
+.mobile-project-btn {
+  display: none;
+}
+
+
+/* =========================
+   LARGE LAPTOP
+========================= */
+
+@media (max-width: 1200px) {
+  .navbar-container {
+    width: 94%;
+
+    gap: 18px;
+  }
+
+  .webexxy-logo {
+    width: 150px;
+  }
+
+  .nav-menu {
+    gap: 25px;
+  }
+
+  .navbar-cta {
+    padding: 0 17px;
+  }
+}
+
+
+/* =========================
+   TABLET / SMALL LAPTOP
+========================= */
+
+@media (max-width: 950px) {
+  .navbar {
+    height: 76px;
+  }
+
+  .navbar-container {
+    width: 92%;
+  }
+
+  .navbar-cta {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+
+    top: 76px;
+    left: 0;
+
+    width: 100%;
+
+    margin: 0;
+
+    padding: 10px 5% 25px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #eeeeee;
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transform: translateY(-15px);
+
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  .nav-menu.active {
+    opacity: 1;
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform: translateY(0);
+  }
+
+  .nav-menu a {
+    width: 100%;
+
+    padding: 16px 5px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    font-size: 15px;
+  }
+
+  .nav-menu a:not(.mobile-project-btn)::after {
+    display: none;
+  }
+
+  .nav-menu a:hover {
+    color: #800105;
+
+    padding-left: 12px;
+  }
+
+  .mobile-project-btn {
+    width: 100%;
+
+    min-height: 50px;
+
+    margin-top: 18px;
+
+    padding: 0 18px !important;
+
+    border-radius: 6px;
+
+    border-bottom: none !important;
+
+    background: #800105;
+
+    color: #ffffff !important;
+
+    display: inline-flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    transition:
+      transform 0.3s ease,
+      background 0.3s ease !important;
+  }
+
+  .mobile-project-btn:hover {
+    background: #650104 !important;
+
+    padding-left: 18px !important;
+
+    transform: translateY(-2px);
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .announcement-bar {
+    min-height: 36px;
+
+    padding: 6px 12px;
+  }
+
+  .announcement-bar p {
+    font-size: 11px;
+  }
+
+  .navbar {
+    height: 70px;
+  }
+
+  .navbar-container {
+    width: 92%;
+  }
+
+  .webexxy-logo {
+    width: 135px;
+  }
+
+  .menu-toggle {
+    width: 42px;
+    height: 42px;
+
+    font-size: 26px;
+  }
+
+  .nav-menu {
+    top: 70px;
+
+    padding: 8px 4% 22px;
+  }
+
+  .nav-menu a {
+    padding: 15px 8px;
+
+    font-size: 14px;
+  }
+
+  .mobile-project-btn {
+    min-height: 48px;
+
+    margin-top: 15px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+  .announcement-bar p {
+    font-size: 10px;
+  }
+
+  .navbar {
+    height: 64px;
+  }
+
+  .navbar-container {
+    width: 90%;
+  }
+
+  .webexxy-logo {
+    width: 118px;
+  }
+
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
+
+    font-size: 24px;
+  }
+
+  .nav-menu {
+    top: 64px;
+
+    padding-bottom: 20px;
+  }
+
+  .nav-menu a {
+    padding: 13px 5px;
+  }
+}

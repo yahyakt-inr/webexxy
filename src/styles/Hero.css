@@ -1,0 +1,666 @@
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  width: 100%;
+  min-height: calc(100vh - 120px);
+
+  padding: 80px 0;
+
+  background: #ffffff;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+.hero-container {
+  width: 90%;
+  max-width: 1250px;
+
+  min-height: 620px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 60px;
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-badge {
+  width: fit-content;
+
+  padding: 8px 14px;
+
+  margin-bottom: 22px;
+
+  border: 1px solid rgba(128, 1, 5, 0.15);
+
+  border-radius: 30px;
+
+  background: #f9eeee;
+
+  color: #800105;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+}
+
+.hero-content h1 {
+  margin: 0 0 25px;
+
+  color: #171717;
+
+  font-size: clamp(50px, 5vw, 76px);
+
+  font-weight: 800;
+
+  line-height: 1.08;
+
+  letter-spacing: -2.5px;
+}
+
+.hero-content h1 span {
+  color: #800105;
+}
+
+.hero-description {
+  max-width: 590px;
+
+  margin: 0 0 32px;
+
+  color: #68727a;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   HERO BUTTONS
+========================= */
+
+.hero-buttons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  flex-wrap: wrap;
+}
+
+.hero-primary-btn,
+.hero-secondary-btn {
+  min-height: 55px;
+
+  padding: 0 23px;
+
+  border-radius: 7px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.hero-primary-btn {
+  background: #800105;
+
+  color: #ffffff;
+
+  min-width: 180px;
+}
+
+.hero-primary-btn span {
+  font-size: 25px;
+
+  line-height: 1;
+
+  transition: transform 0.3s ease;
+}
+
+.hero-primary-btn:hover {
+  background: #650104;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 14px 28px rgba(128, 1, 5, 0.2);
+}
+
+.hero-primary-btn:hover span {
+  transform: translateX(5px);
+}
+
+.hero-secondary-btn {
+  min-width: 145px;
+
+  border: 1px solid #dddddd;
+
+  color: #171717;
+
+  background: #ffffff;
+}
+
+.hero-secondary-btn:hover {
+  border-color: #800105;
+
+  color: #800105;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================
+   HERO VISUAL
+========================= */
+
+.hero-visual {
+  width: 100%;
+  min-height: 520px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.visual-glow {
+  position: absolute;
+
+  width: 390px;
+  height: 390px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(128, 1, 5, 0.12) 0%,
+    rgba(128, 1, 5, 0.06) 42%,
+    rgba(128, 1, 5, 0) 70%
+  );
+
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+
+/* =========================
+   FLOATING CARDS
+========================= */
+
+.floating-card {
+  position: absolute;
+
+  width: 155px;
+  min-height: 125px;
+
+  padding: 18px;
+
+  border: 1px solid #e7e7e7;
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+
+  animation: floatCard 4s ease-in-out infinite;
+}
+
+.floating-card:hover {
+  transform: translateY(-8px) scale(1.04) !important;
+
+  border-color: rgba(128, 1, 5, 0.4);
+
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.12);
+
+  animation-play-state: paused;
+}
+
+.floating-icon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  background: #f9eeee;
+
+  color: #800105;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.floating-card:hover .floating-icon {
+  background: #800105;
+
+  color: #ffffff;
+
+  transform: rotate(-8deg);
+}
+
+.floating-title {
+  color: #252525;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  line-height: 1.35;
+}
+
+
+/* =========================
+   CARD POSITIONS
+========================= */
+
+.card-web {
+  top: 25px;
+  left: 8%;
+
+  animation-delay: 0s;
+}
+
+.card-design {
+  top: 115px;
+  right: 2%;
+
+  animation-delay: 0.7s;
+}
+
+.card-mobile {
+  top: 235px;
+  left: 18%;
+
+  animation-delay: 1.2s;
+}
+
+.card-graphic {
+  bottom: 45px;
+  right: 5%;
+
+  animation-delay: 1.8s;
+}
+
+.card-marketing {
+  bottom: 20px;
+  left: 2%;
+
+  animation-delay: 2.3s;
+}
+
+@keyframes floatCard {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+
+/* =========================
+   LARGE LAPTOP
+========================= */
+
+@media (max-width: 1200px) {
+  .hero-container {
+    width: 92%;
+
+    gap: 35px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(48px, 5vw, 66px);
+  }
+
+  .hero-visual {
+    min-height: 480px;
+  }
+
+  .floating-card {
+    width: 145px;
+
+    min-height: 115px;
+
+    padding: 16px;
+  }
+
+  .card-web {
+    left: 3%;
+  }
+
+  .card-design {
+    right: 0;
+  }
+}
+
+
+/* =========================
+   TABLET / SMALL LAPTOP
+========================= */
+
+@media (max-width: 950px) {
+  .hero {
+    min-height: auto;
+
+    padding: 75px 0;
+  }
+
+  .hero-container {
+    width: 90%;
+
+    min-height: auto;
+
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .hero-content {
+    max-width: 720px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(48px, 8vw, 68px);
+  }
+
+  .hero-description {
+    max-width: 650px;
+  }
+
+  .hero-visual {
+    max-width: 680px;
+
+    width: 100%;
+
+    min-height: 450px;
+
+    margin: 0 auto;
+  }
+
+  .card-web {
+    left: 8%;
+  }
+
+  .card-design {
+    right: 8%;
+  }
+
+  .card-mobile {
+    left: 20%;
+  }
+
+  .card-graphic {
+    right: 10%;
+  }
+
+  .card-marketing {
+    left: 8%;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 65px 0 55px;
+  }
+
+  .hero-container {
+    width: 92%;
+
+    gap: 25px;
+  }
+
+  .hero-badge {
+    padding: 7px 12px;
+
+    margin-bottom: 18px;
+
+    font-size: 11px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(38px, 11vw, 52px);
+
+    line-height: 1.1;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 20px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin-bottom: 26px;
+  }
+
+  .hero-buttons {
+    width: 100%;
+
+    gap: 10px;
+  }
+
+  .hero-primary-btn,
+  .hero-secondary-btn {
+    min-height: 52px;
+
+    padding: 0 18px;
+
+    flex: 1;
+
+    min-width: 0;
+
+    font-size: 13px;
+  }
+
+  .hero-visual {
+    min-height: 380px;
+  }
+
+  .visual-glow {
+    width: 290px;
+    height: 290px;
+  }
+
+  .floating-card {
+    width: 125px;
+
+    min-height: 98px;
+
+    padding: 12px;
+
+    border-radius: 11px;
+
+    gap: 9px;
+  }
+
+  .floating-icon {
+    width: 35px;
+    height: 35px;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+  }
+
+  .floating-title {
+    font-size: 11px;
+  }
+
+  .card-web {
+    top: 10px;
+    left: 0;
+  }
+
+  .card-design {
+    top: 65px;
+    right: 0;
+  }
+
+  .card-mobile {
+    top: 175px;
+    left: 12%;
+  }
+
+  .card-graphic {
+    bottom: 20px;
+    right: 0;
+  }
+
+  .card-marketing {
+    bottom: 0;
+    left: 0;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+  .hero {
+    padding-top: 55px;
+  }
+
+  .hero-content h1 {
+    font-size: 37px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-primary-btn,
+  .hero-secondary-btn {
+    width: 100%;
+
+    flex: none;
+  }
+
+  .hero-visual {
+    min-height: 340px;
+  }
+
+  .floating-card {
+    width: 112px;
+
+    min-height: 90px;
+
+    padding: 10px;
+
+    gap: 7px;
+  }
+
+  .floating-icon {
+    width: 31px;
+    height: 31px;
+
+    font-size: 14px;
+  }
+
+  .floating-title {
+    font-size: 10px;
+  }
+
+  .visual-glow {
+    width: 240px;
+    height: 240px;
+  }
+
+  .card-web {
+    left: 0;
+  }
+
+  .card-design {
+    right: 0;
+  }
+
+  .card-mobile {
+    left: 10%;
+    top: 150px;
+  }
+}
