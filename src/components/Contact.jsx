@@ -19,20 +19,41 @@ function Contact() {
           </p>
 
           <div className="contact-details">
+
+            {/* EMAIL */}
             <div>
               <span>Email</span>
-              <p>hello@webexxy.com</p>
+              <p>
+                <a href="mailto:hello@webexxy.com">
+                  hello@webexxy.com
+                </a>
+              </p>
             </div>
 
+            {/* PHONE - DIRECT CALL */}
             <div>
               <span>Phone</span>
-              <p>+91 00000 00000</p>
+              <p>
+                <a href="tel:+918086367029">
+                  +91 8086 367 029
+                </a>
+              </p>
             </div>
 
+            {/* LOCATION - GOOGLE MAP */}
             <div>
               <span>Location</span>
-              <p>Kerala, India</p>
+              <p>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=SUHA+DIGITECH+Chandakunnu+Veliyamthode+Nilambur+Kerala"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  SUHA DIGITECH, Veliyamthode, Kerala
+                </a>
+              </p>
             </div>
+
           </div>
         </div>
 

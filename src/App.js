@@ -6,6 +6,7 @@ import WhyChooseUs from "./components/WhyChooseUs";
 import CTA from "./components/CTA";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import WhatsApp from "./components/WhatsApp";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <CTA />
       <Contact />
       <Footer />
+      <WhatsApp />
     </div>
   );
 }
