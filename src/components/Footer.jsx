@@ -63,17 +63,21 @@ function Footer() {
 
                 <div className="footer-contact">
 
-                    <h3>Let's Talk</h3>
+                    <div className="footer-contact-info">
 
-                    <a href="mailto:hello@webexxy.com">
-                        hello@webexxy.com
-                    </a>
+                        <h3>Let's Talk</h3>
 
-                    <a href="tel:+910000000000">
-                        +91 00000 00000
-                    </a>
+                        <a href="mailto:hello@webexxy.com">
+                            hello@webexxy.com
+                        </a>
 
-                    <p>Kerala, India</p>
+                        <a href="tel:+918086367029">
+                            +91 80863 67029
+                        </a>
+
+                        <p>Kerala, India</p>
+
+                    </div>
 
                     <a
                         href="#contact-form"
